@@ -71,7 +71,7 @@ function buildAPoem() {
     // CONSTRUCT //
     // MARKOV!!! //
     // we're going to start with grams where the first index is uppercase
-    var startingPosition = getAnUppercaseIndex(grams);
+    var startingPosition = 0 //getAnUppercaseIndex(grams);
     var poem = grams[startingPosition];
     // pull out added grams
     grams.splice(startingPosition, 1);
