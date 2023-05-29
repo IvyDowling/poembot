@@ -160,11 +160,18 @@ function addCode() {
     $("#corpus").append($("#myShellId").text())
 }
 
+function peekCorp() {
+    $("#corpus").toggle()
+}
+
 document.addEventListener("DOMContentLoaded", function() {    
     $("#meInputId").on("click", function(){
         pushPoem(buildAPoem());
     });
     $("#addcorpId").on("click", function(){
         addCode();
+    });
+    $("#peekcorpId").on("click", function(){
+        peekCorp();
     });
 });
