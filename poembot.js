@@ -164,6 +164,14 @@ function peekCorp() {
     $("#corpus").toggle()
 }
 
+function manualAdd() {
+    $("#corpus").append($("#inputAreaId").text())
+}
+
+function clearCorp() {
+    $("#corpus").text("")
+}
+
 document.addEventListener("DOMContentLoaded", function() {    
     $("#meInputId").on("click", function(){
         pushPoem(buildAPoem());
@@ -173,5 +181,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     $("#peekcorpId").on("click", function(){
         peekCorp();
+    });
+    $("#submitInputId").on("click", function(){
+        manualAdd();
+    });
+    $("#clearcorpId").on("click", function(){
+        clearCorp();
     });
 });
